@@ -6,7 +6,7 @@
 /*   By: aromani <aromani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/09 18:55:20 by aromani           #+#    #+#             */
-/*   Updated: 2025/11/10 16:52:43 by aromani          ###   ########.fr       */
+/*   Updated: 2025/11/10 19:30:48 by aromani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,14 +28,14 @@ Account::~Account()
 
 Account::Account(int initial_dep)
 {
-    _amount = initial_dep;
-    _accountIndex = _nbAccounts - 1;
+    _accountIndex = _nbAccounts;
     _nbDeposits = 0;
     _nbWithdrawals = 0;
+    _amount = initial_dep;
     _displayTimestamp();
-    std::cout << "index:" << _nbAccounts << ";amount:" << _amount << ";created" << std::endl;
-    _accountIndex++;
+    std::cout << "index:" << _accountIndex << ";amount:" << _amount << ";created" << std::endl;
     _nbAccounts++;
+    //_accountIndex++;
 }
 
 int	Account::getNbAccounts(void)
