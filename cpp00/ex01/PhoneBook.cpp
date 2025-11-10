@@ -6,11 +6,12 @@
 /*   By: aromani <aromani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/08 17:26:49 by aromani           #+#    #+#             */
-/*   Updated: 2025/11/08 21:53:22 by aromani          ###   ########.fr       */
+/*   Updated: 2025/11/10 13:32:14 by aromani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
+#include <cstdlib>
 
 int    num_parser(std::string str)
 {
@@ -129,23 +130,20 @@ void PhoneBook::AddCon()
 
 void print_parser(std::string str)
 {
-    int i;
-    
-    i = 0;
+    size_t i;
     
     if (str.length() > 10)
     {
-        for (i; i < 9; i++)
+        for (i = 0; i < 9; i++)
             std::cout << str[i];
         std::cout << '.';
     }
     else
     {
-        for (i ; i < str.length(); i++)
+        for (i = 0; i < str.length(); i++)
             std::cout << str[i] ;
-        i = 10 - str.length();
         // std::cout << "index is +++++ "<<i << std::endl;
-        for (i; i != 0; i--)
+        for ( i = 10 - str.length(); i != 0; i--)
             std::cout << " ";
         //std::cout << "" << std::endl;
     }
@@ -155,8 +153,6 @@ void PhoneBook::printer()
 {
     int i;
 
-    i = 0;
-
     print_parser("index");
     std::cout << '|' ;
     print_parser("first name");
@@ -165,7 +161,7 @@ void PhoneBook::printer()
     std::cout << '|' ;
     print_parser(" nickname");
     std::cout << '|' << std::endl ;
-    for (i ; i < c_lengt; i++)
+    for (i = 0; i < c_lengt; i++)
     {
         std::cout << i << "         " ; 
         std::cout << '|' ;

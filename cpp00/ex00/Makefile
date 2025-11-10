@@ -11,7 +11,7 @@ all : $(NAME)
 $(NAME) : $(OBJF)
 	c++ $(FLAGS) $(OBJF) -o $(NAME)
 
-%.o : %.c
+%.o : %.cpp
 	c++ $(FLAGS) -c $< -o $@
 	
 clean :

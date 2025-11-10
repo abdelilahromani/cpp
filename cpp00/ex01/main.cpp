@@ -6,11 +6,12 @@
 /*   By: aromani <aromani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/09 17:35:38 by aromani           #+#    #+#             */
-/*   Updated: 2025/11/09 17:35:39 by aromani          ###   ########.fr       */
+/*   Updated: 2025/11/10 13:32:34 by aromani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
+#include <cstdlib>
 
 int main()
 {
