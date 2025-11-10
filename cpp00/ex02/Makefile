@@ -1,4 +1,4 @@
-NAME = PhoneBook
+NAME = account
 
 FLAGS = -Wall -Wextra -Werror -std=c++98
 
@@ -13,7 +13,7 @@ all : $(NAME)
 $(NAME) : $(OBJF)
 	c++ $(FLAGS) $(OBJF) -o $(NAME)
 
-%.o : %.c $(HF)
+%.o : %.cpp $(HF)
 	c++ $(FLAGS) -c $< -o $@
 	
 clean :

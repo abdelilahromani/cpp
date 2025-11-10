@@ -1,18 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*    Account.cpp                                       :+:      :+:    :+:   */
+/*   Account.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aromani <aromani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/09 18:55:20 by aromani           #+#    #+#             */
-/*   Updated: 2025/11/10 12:59:47 by aromani          ###   ########.fr       */
+/*   Updated: 2025/11/10 13:41:49 by aromani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Account.hpp"
 #include <iostream>
+#include <iomanip>
 #include <ctime>
+
+int Account::_nbAccounts = 0;
+int Account::_totalAmount = 0;
+int Account::_totalNbDeposits = 0;
+int Account::_totalNbWithdrawals = 0;
 
 Account::~Account()
 {
@@ -22,6 +28,9 @@ Account::~Account()
 Account::Account(int initial_dep)
 {
     _amount = initial_dep;
+    _accountIndex = 0;
+    _nbDeposits = 0;
+    _nbWithdrawals = 0;
     std::cout << "index:" << _accountIndex << ";amount:" << _amount << ";created" << std::endl;
 }
 
@@ -47,6 +56,7 @@ int Account::getNbWithdrawals(void)
 
 void	Account::displayAccountsInfos( void )
 {
+    _displayTimestamp();
     std::cout << "accounts:" << _nbAccounts << ";total:" <<  _totalAmount << ";deposits:" << _totalNbDeposits << ";withdrawals:" << _totalNbWithdrawals << std::endl ;
 }
 
@@ -65,7 +75,8 @@ bool    Account::makeWithdrawal(int witherwals)
     _nbWithdrawals++;
     _amount -= witherwals;
     _totalAmount -= witherwals;
-    //affichage amount && pamount
+    //affichage amount && pamount && check if wihraw > amount
+    return (true);
 }
 
 int     Account::checkAmount(void) const
@@ -80,5 +91,13 @@ void    Account::displayStatus(void) const
 
 void Account::_displayTimestamp(void)
 {
+    std::time_t time = std::time(NULL);
+    std::tm *time_now = std::localtime(&time);
     
-}
+    std::cout << "[" << time_now->tm_year + 1900;
+    std::cout << std::setfill('0') << std::setw(2) << time_now->tm_mon + 1;
+    std::cout << std::setfill('0') << std::setw(2) << time_now->tm_mday << "_";
+    std::cout << std::setfill('0') << std::setw(2) << time_now->tm_hour;
+    std::cout << std::setfill('0') << std::setw(2) << time_now->tm_min;
+    std::cout << std::setfill('0') << std::setw(2) << time_now->tm_sec << "] ";
+}   
