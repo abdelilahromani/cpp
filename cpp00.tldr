@@ -36,18 +36,62 @@
 		{
 			"id": "pointer:pointer",
 			"typeName": "pointer",
-			"x": 975.1271647699378,
-			"y": 361.9465155937902,
-			"lastActivityTimestamp": 1762189141173,
+			"x": -257.375037431593,
+			"y": 609.2886025283631,
+			"lastActivityTimestamp": 1762877789228,
 			"meta": {}
 		},
 		{
-			"x": 392.64176933879173,
-			"y": 340.6658964215759,
-			"z": 0.5286882857572297,
+			"x": 378.74463769611685,
+			"y": -107.4554268455019,
+			"z": 0.5602529835795966,
 			"meta": {},
 			"id": "camera:page:page",
 			"typeName": "camera"
+		},
+		{
+			"x": 83.49281084604911,
+			"y": 519.8180730232701,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:-x1ktCHyZKM8JYtAhUCqX",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "m",
+				"w": 482.71807861328125,
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"marks": [
+										{
+											"type": "bold"
+										}
+									],
+									"text": "std::cout << \"accounts:\" << std::endl;"
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "a5CZs24V",
+			"typeName": "shape"
 		},
 		{
 			"x": -264.5105293990258,
@@ -122,12 +166,12 @@
 			"typeName": "shape"
 		},
 		{
-			"editingShapeId": "shape:aoamFOYrr1qWJI-0NmR9z",
+			"editingShapeId": null,
 			"croppingShapeId": null,
 			"selectedShapeIds": [
-				"shape:aoamFOYrr1qWJI-0NmR9z"
+				"shape:7ABXJw_1jn4j99GnU5EWw"
 			],
-			"hoveredShapeId": "shape:aoamFOYrr1qWJI-0NmR9z",
+			"hoveredShapeId": null,
 			"erasingShapeIds": [],
 			"hintingShapeIds": [],
 			"focusedGroupId": null,
@@ -135,6 +179,141 @@
 			"id": "instance_page_state:page:page",
 			"pageId": "page:page",
 			"typeName": "instance_page_state"
+		},
+		{
+			"x": -255.68038804841484,
+			"y": 593.7740492740918,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:7ABXJw_1jn4j99GnU5EWw",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "m",
+				"w": 1275.632568359375,
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "std::cout : this is  refers to the standard output strem in c++ "
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "std:: this part define the std namespace"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "cout stand for (character output) used to send the data to stdout"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": ":: scope resolution operator, used to specify the context or scopr in which praticular identifier"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "ex : when you write std::cout ,the :: tells the compiler thath cout in a memeber for the std namespace"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "also it is used to access static members of a class, define member functions outside the class"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "<< this is called the insertion operator, it is used to insert data to the output stream"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "std::endl : this is manipulator  thath inserts a newline '\\n'  and flash the output buffer "
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "moves the cursor to the next line after printing the text "
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "a6RIUzlt",
+			"typeName": "shape"
 		},
 		{
 			"x": -259.0375188964704,
@@ -247,7 +426,7 @@
 			"brush": null,
 			"scribbles": [],
 			"cursor": {
-				"type": "default",
+				"type": "move",
 				"rotation": 0
 			},
 			"isFocusMode": false,
@@ -257,8 +436,8 @@
 			"screenBounds": {
 				"x": 0,
 				"y": 0,
-				"w": 878.182861328125,
-				"h": 693.962158203125
+				"w": 875.7716064453125,
+				"h": 637.0563354492188
 			},
 			"insets": [
 				false,

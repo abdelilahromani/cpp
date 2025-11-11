@@ -6,7 +6,7 @@
 /*   By: aromani <aromani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/09 17:35:38 by aromani           #+#    #+#             */
-/*   Updated: 2025/11/10 13:32:34 by aromani          ###   ########.fr       */
+/*   Updated: 2025/11/10 19:43:46 by aromani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int main()
 
     while (true)
     {
-        std::cout << "brombt  ADD || SEARCH || EXIT  : " ;
+        std::cout << "prompt  ADD || SEARCH || EXIT  : " ;
         std::getline(std::cin, prom);
         if (std::cin.eof())
             return (0);
