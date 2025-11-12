@@ -6,12 +6,13 @@
 /*   By: aromani <aromani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/08 17:26:49 by aromani           #+#    #+#             */
-/*   Updated: 2025/11/10 13:32:14 by aromani          ###   ########.fr       */
+/*   Updated: 2025/11/12 18:00:36 by aromani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
 #include <cstdlib>
+#include <iomanip>
 
 int    num_parser(std::string str)
 {
@@ -122,7 +123,7 @@ void PhoneBook::AddCon()
     contacts[c_index].set_dsec(dar_sec);
 
     c_index++;
-    if (c_index == 7)
+    if (c_index == 8)
         c_index = 0;
     if (c_lengt < 8)
         c_lengt++;
@@ -140,12 +141,7 @@ void print_parser(std::string str)
     }
     else
     {
-        for (i = 0; i < str.length(); i++)
-            std::cout << str[i] ;
-        // std::cout << "index is +++++ "<<i << std::endl;
-        for ( i = 10 - str.length(); i != 0; i--)
-            std::cout << " ";
-        //std::cout << "" << std::endl;
+        std::cout << std::setw(10) << str;
     }
 }
 
@@ -163,7 +159,7 @@ void PhoneBook::printer()
     std::cout << '|' << std::endl ;
     for (i = 0; i < c_lengt; i++)
     {
-        std::cout << i << "         " ; 
+        std::cout << std::setw(10) << i ; 
         std::cout << '|' ;
         print_parser(contacts[i].get_fname());
         std::cout << '|' ;
@@ -202,7 +198,7 @@ void PhoneBook::Search()
         std::cout << "unvalid index" << std::endl;
         return;
     }
-    std::cout << index << "         " ; 
+    std::cout << std::setw(10) << index; 
     std::cout << '|' ;
     print_parser(contacts[index].get_fname());
     std::cout << '|' ;

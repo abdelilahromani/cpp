@@ -1,0 +1,266 @@
+{
+	"tldrawFileFormatVersion": 1,
+	"schema": {
+		"schemaVersion": 2,
+		"sequences": {
+			"com.tldraw.store": 4,
+			"com.tldraw.asset": 1,
+			"com.tldraw.camera": 1,
+			"com.tldraw.document": 2,
+			"com.tldraw.instance": 25,
+			"com.tldraw.instance_page_state": 5,
+			"com.tldraw.page": 1,
+			"com.tldraw.instance_presence": 6,
+			"com.tldraw.pointer": 1,
+			"com.tldraw.shape": 4,
+			"com.tldraw.asset.bookmark": 2,
+			"com.tldraw.asset.image": 5,
+			"com.tldraw.asset.video": 5,
+			"com.tldraw.shape.group": 0,
+			"com.tldraw.shape.text": 2,
+			"com.tldraw.shape.bookmark": 2,
+			"com.tldraw.shape.draw": 2,
+			"com.tldraw.shape.geo": 9,
+			"com.tldraw.shape.note": 8,
+			"com.tldraw.shape.line": 5,
+			"com.tldraw.shape.frame": 0,
+			"com.tldraw.shape.arrow": 5,
+			"com.tldraw.shape.highlight": 1,
+			"com.tldraw.shape.embed": 4,
+			"com.tldraw.shape.image": 4,
+			"com.tldraw.shape.video": 2,
+			"com.tldraw.binding.arrow": 0
+		}
+	},
+	"records": [
+		{
+			"gridSize": 10,
+			"name": "",
+			"meta": {},
+			"id": "document:document",
+			"typeName": "document"
+		},
+		{
+			"meta": {},
+			"id": "page:page",
+			"name": "Page 1",
+			"index": "a1",
+			"typeName": "page"
+		},
+		{
+			"id": "pointer:pointer",
+			"typeName": "pointer",
+			"x": 904.69921875,
+			"y": 1569.6634521484375,
+			"lastActivityTimestamp": 1762961393114,
+			"meta": {}
+		},
+		{
+			"followingUserId": null,
+			"opacityForNextShape": 1,
+			"stylesForNextShape": {
+				"tldraw:color": "black",
+				"tldraw:size": "m"
+			},
+			"brush": null,
+			"scribbles": [],
+			"cursor": {
+				"type": "default",
+				"rotation": 0
+			},
+			"isFocusMode": false,
+			"exportBackground": true,
+			"isDebugMode": false,
+			"isToolLocked": false,
+			"screenBounds": {
+				"x": 0,
+				"y": 0,
+				"w": 1502,
+				"h": 988
+			},
+			"insets": [
+				false,
+				false,
+				true,
+				false
+			],
+			"zoomBrush": null,
+			"isGridMode": false,
+			"isPenMode": false,
+			"chatMessage": "",
+			"isChatting": false,
+			"highlightedUserIds": [],
+			"isFocused": true,
+			"devicePixelRatio": 2,
+			"isCoarsePointer": false,
+			"isHoveringCanvas": true,
+			"openMenus": [],
+			"isChangingStyle": false,
+			"isReadonly": false,
+			"meta": {},
+			"duplicateProps": null,
+			"id": "instance:instance",
+			"currentPageId": "page:page",
+			"typeName": "instance"
+		},
+		{
+			"editingShapeId": null,
+			"croppingShapeId": null,
+			"selectedShapeIds": [],
+			"hoveredShapeId": null,
+			"erasingShapeIds": [],
+			"hintingShapeIds": [],
+			"focusedGroupId": null,
+			"meta": {},
+			"id": "instance_page_state:page:page",
+			"pageId": "page:page",
+			"typeName": "instance_page_state"
+		},
+		{
+			"x": -112.73046875,
+			"y": -905.7337646484375,
+			"z": 1,
+			"meta": {},
+			"id": "camera:page:page",
+			"typeName": "camera"
+		},
+		{
+			"x": 185.30859375,
+			"y": 206.609375,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:9k0zLCNunp-aP5UUoXVmh",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "m",
+				"w": 1142.875,
+				"text": "Just like structs, a class is a program-defined compound type that can have many member \nvariables with different types.",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1
+			},
+			"parentId": "page:page",
+			"index": "a1",
+			"typeName": "shape"
+		},
+		{
+			"x": 685.90234375,
+			"y": 132.0703125,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:4Oco23BjrSxcbMz8scJlN",
+			"type": "text",
+			"props": {
+				"color": "light-green",
+				"size": "m",
+				"w": 90.28125,
+				"text": "classes",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1
+			},
+			"parentId": "page:page",
+			"index": "a21gd",
+			"typeName": "shape"
+		},
+		{
+			"x": 181.19140625,
+			"y": 314.625,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:uyxg27_hMrTFy5npjXEde",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "m",
+				"w": 1351.796875,
+				"text": "Member functions in C++ are functions that are defined inside a class or struct and operate on objects of that class or struct. They have access to the class's data members and can manipulate an object's state or perform actions related to the object.\n\nA const member function is a special type of member function that guarantees it will not modify the object on which it is called. It cannot change any data members or call non-const member functions (which could modify the object). To declare a const member function, the keyword const is appended to the function declaration after the parameter list. This allows the function to be called on const instances of the class (objects declared as const), enforcing const-correctness and ensuring the object's state remains unchanged when the function is invoked.\n\na static member function belongs to the class itself rather than any particular object. It is declared with the static keyword inside the class. Since static member functions are not tied to a specific object, they do not have access to the this pointer and cannot access non-static members of the class. They can only access static data members or other static member functions. Static member functions can be called directly using the class name without creating an instance of the class.",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": false,
+				"scale": 1
+			},
+			"parentId": "page:page",
+			"index": "a35gP",
+			"typeName": "shape"
+		},
+		{
+			"x": 728.45703125,
+			"y": 846.643798828125,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:oTybZrIlQcJ8UhFAozCtQ",
+			"type": "text",
+			"props": {
+				"color": "light-green",
+				"size": "m",
+				"w": 170.875,
+				"text": "stdio streams",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": true,
+				"scale": 1
+			},
+			"parentId": "page:page",
+			"index": "a4AJU",
+			"typeName": "shape"
+		},
+		{
+			"x": 429.88671875,
+			"y": 915.128173828125,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:ney2HL8XYKQiJeaVz01D0",
+			"type": "text",
+			"props": {
+				"color": "light-green",
+				"size": "m",
+				"w": 920,
+				"text": "In C++, the \"stdio streams\" or standard input/output streams refer to predefined stream objects that handle data input and output between a program and external devices or mediums. These streams abstract the reading and writing of data as a flow of bytes, allowing interaction with input devices like the keyboard and output devices like the console screen.",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": false,
+				"scale": 1
+			},
+			"parentId": "page:page",
+			"index": "a57id",
+			"typeName": "shape"
+		},
+		{
+			"x": 215.51953125,
+			"y": 1137.9405517578125,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:s0l0KLptm-4UGteB0d30b",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "m",
+				"w": 1351.796875,
+				"text": "The key standard I/O streams in C++ are:\nstd::cin: The standard input stream, typically connected to the keyboard. It is used to receive input from the user into the program.\nstd::cout: The standard output stream, usually connected to the console screen. It outputs data from the program to the user.\nstd::cerr: The standard error stream used for outputting error messages. It is also connected to the console but typically unbuffered for immediate display.\nstd::clog: The standard logging stream used for general logging and diagnostics.",
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": false,
+				"scale": 1
+			},
+			"parentId": "page:page",
+			"index": "a690s",
+			"typeName": "shape"
+		}
+	]
+}
