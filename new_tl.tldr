@@ -50,9 +50,9 @@
 		{
 			"id": "pointer:pointer",
 			"typeName": "pointer",
-			"x": 904.69921875,
-			"y": 1569.6634521484375,
-			"lastActivityTimestamp": 1762961393114,
+			"x": 114.90234375,
+			"y": 67.5655517578125,
+			"lastActivityTimestamp": 1762967365493,
 			"meta": {}
 		},
 		{
@@ -75,7 +75,7 @@
 			"screenBounds": {
 				"x": 0,
 				"y": 0,
-				"w": 1502,
+				"w": 1276,
 				"h": 988
 			},
 			"insets": [
@@ -104,9 +104,11 @@
 			"typeName": "instance"
 		},
 		{
-			"editingShapeId": null,
+			"editingShapeId": "shape:9k0zLCNunp-aP5UUoXVmh",
 			"croppingShapeId": null,
-			"selectedShapeIds": [],
+			"selectedShapeIds": [
+				"shape:9k0zLCNunp-aP5UUoXVmh"
+			],
 			"hoveredShapeId": null,
 			"erasingShapeIds": [],
 			"hintingShapeIds": [],
@@ -118,7 +120,7 @@
 		},
 		{
 			"x": -112.73046875,
-			"y": -905.7337646484375,
+			"y": 139.1844482421875,
 			"z": 1,
 			"meta": {},
 			"id": "camera:page:page",
@@ -137,7 +139,7 @@
 				"color": "black",
 				"size": "m",
 				"w": 1142.875,
-				"text": "Just like structs, a class is a program-defined compound type that can have many member \nvariables with different types.",
+				"text": "Just like structs, a class is a program-defined compound type that can have many member \nvariables or attrebuites with different types.",
 				"font": "draw",
 				"textAlign": "start",
 				"autoSize": true,

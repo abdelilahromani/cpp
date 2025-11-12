@@ -6,7 +6,7 @@
 /*   By: aromani <aromani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/08 17:26:49 by aromani           #+#    #+#             */
-/*   Updated: 2025/11/12 18:00:36 by aromani          ###   ########.fr       */
+/*   Updated: 2025/11/12 18:10:19 by aromani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int    num_parser(std::string str)
     while (str[i])
     {
         if (!isdigit(str[i]) || str.length() > 10)
-            return (std::cout << "unvalid phone number" << std::endl, -1);
+            return (std::cout << "invalid phone number" << std::endl, -1);
         i++;
     }
     return (0);
@@ -36,7 +36,7 @@ int isprint_check(std::string str)
     while (str[i])
     {
         if (!isprint(str[i]) || !isalnum(str[i]))
-            return (std::cout << "unvalid systaxe" << std::endl, -1);
+            return (std::cout << "invalid systaxe" << std::endl, -1);
         i++;
     }
     return (0);
@@ -182,7 +182,7 @@ void PhoneBook::Search()
         return;
     if (str.empty())
     {
-        std::cout << "unvalid index" << std::endl;
+        std::cout << "invalid index" << std::endl;
         return;
     }
     index = 10;
@@ -190,12 +190,12 @@ void PhoneBook::Search()
         index = str[0] - 48;
     else
     {
-        std::cout << "unvalid index" << std::endl;
+        std::cout << "invalid index" << std::endl;
         return;
     }
     if (index >= 8)
     {
-        std::cout << "unvalid index" << std::endl;
+        std::cout << "invalid index" << std::endl;
         return;
     }
     std::cout << std::setw(10) << index; 
