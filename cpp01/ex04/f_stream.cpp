@@ -1,24 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanA.cpp                                         :+:      :+:    :+:   */
+/*   f_stream.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aromani <aromani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/17 22:29:20 by aromani           #+#    #+#             */
-/*   Updated: 2025/11/18 16:44:47 by aromani          ###   ########.fr       */
+/*   Created: 2025/11/18 18:10:02 by aromani           #+#    #+#             */
+/*   Updated: 2025/11/18 18:10:03 by aromani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "HumanA.hpp"
-
-HumanA::HumanA(std::string name ,Weapon &We) : w(We)
-{
-    this->name = name;
-}
-
-void HumanA::attack()
-{
-    std::cout << name << " attacks with their " << w.get_type() << std::endl;
-}
 

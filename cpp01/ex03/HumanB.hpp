@@ -11,9 +11,8 @@ private:
     Weapon *w;
 public:
     HumanB(std::string name);
-    ~HumanB();
     void attack();
-    void setweapen(Weapon we);
+    void setweapen(Weapon &we);
 };
 
 

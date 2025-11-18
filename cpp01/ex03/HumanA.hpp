@@ -11,7 +11,6 @@ private:
     Weapon &w;
 public:
     HumanA(std::string name, Weapon &w);
-    ~HumanA();
     void attack();
 };
 
