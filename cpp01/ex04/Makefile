@@ -1,12 +1,12 @@
 NAME = Sed_is_for_losers
 
-FLAGS = -Wall -Wextra -Werror -std=c++98
+FLAGS = -Wall -Wextra -Werror -std=c++98 
 
-SRCF = main.cpp f_stream.cpp 
+SRCF = main.cpp Line.cpp 
 
 OBJF = ${SRCF:.cpp=.o}
 
-HF = f_stream.hpp
+HF = Line.hpp
 
 all : $(NAME)
 

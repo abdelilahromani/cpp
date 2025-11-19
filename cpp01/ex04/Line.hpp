@@ -7,14 +7,15 @@
 class Line
 {
     private:
-        std::string line;
         std::string s1;
         std::string s2;
-        std::string file_name;
+        std::string data_file;
+        std::string out_file;
+        std::string all_data;
     public:
-        //std::string get_line(int fd);
-        void change_line();
-        void set_at(std::string line, std::string s1, std::string s2, std::string f_name);
+        void fill_string();
+        Line(std::string s1, std::string s2, std::string f_name, std::string outfile);
+        void change_content();
 };
 
 # endif
