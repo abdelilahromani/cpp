@@ -1,12 +1,12 @@
-NAME = Sed_is_for_losers
+NAME = Harl
 
 FLAGS = -Wall -Wextra -Werror -std=c++98 
 
-SRCF = main.cpp Line.cpp 
+SRCF = main.cpp Harl.cpp 
 
 OBJF = ${SRCF:.cpp=.o}
 
-HF = Line.hpp
+HF = Harl.hpp
 
 all : $(NAME)
 
