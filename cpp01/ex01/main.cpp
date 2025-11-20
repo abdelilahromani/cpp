@@ -6,7 +6,7 @@
 /*   By: aromani <aromani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 16:48:56 by aromani           #+#    #+#             */
-/*   Updated: 2025/11/17 21:40:35 by aromani          ###   ########.fr       */
+/*   Updated: 2025/11/20 15:40:34 by aromani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 int main()
 {
-    Zombie *ze = zombieHorde(5, "bobnbo");
+    Zombie *ze = zombieHorde(-1zz, "bobnbo");
     
     for (int i = 0; i < 5; i++)
     {

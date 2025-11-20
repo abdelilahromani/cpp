@@ -6,7 +6,7 @@
 /*   By: aromani <aromani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/20 10:34:50 by aromani           #+#    #+#             */
-/*   Updated: 2025/11/20 15:06:37 by aromani          ###   ########.fr       */
+/*   Updated: 2025/11/20 15:38:26 by aromani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ void Harl::complain(std::string level)
     {
         case 0:
             (this->*members[0])();
-            //fall through
+            //fall through         
         case 1:
             (this->*members[1])();
             //fall through

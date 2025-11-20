@@ -6,7 +6,7 @@
 /*   By: aromani <aromani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/18 18:10:02 by aromani           #+#    #+#             */
-/*   Updated: 2025/11/19 19:58:58 by aromani          ###   ########.fr       */
+/*   Updated: 2025/11/20 15:56:12 by aromani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,8 @@ void Line::fill_string()
     while (true)
     {
         std::getline(file, line);
-        line.append("\n");
+        if (!file.eof())
+            line.append("\n");
         all_data.append(line);
         if (file.eof())
             break;
@@ -55,7 +56,6 @@ void Line::change_content()
     if (all_data.empty())
         return ;
     std::ofstream ou_f(out_file.c_str());
-    std::cout << out_file << std::endl;
     if (!ou_f.is_open())
     {
         std::cout << "bad file name" << std::endl;
@@ -71,11 +71,11 @@ void Line::change_content()
             j++;
             len++;
         }
-        if (j == s1.length())
+        if (j == s1.length() && s1.length() != 0)
         {
             all_data.erase(f_index, s1.length());
             all_data.insert(f_index, s2);
-            i += s2.length();
+            i += s1.length();
         }
         j = 0;
         i++;
