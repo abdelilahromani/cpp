@@ -6,7 +6,7 @@
 /*   By: aromani <aromani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 15:08:58 by aromani           #+#    #+#             */
-/*   Updated: 2025/11/17 16:09:08 by aromani          ###   ########.fr       */
+/*   Updated: 2025/11/22 14:25:33 by aromani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int main()
 {
-    Zombie *zo = newZombie("aloo");
+    Zombie *zo = newZombie("name1");
     zo->announce();
-    randomChump("oui");
+    randomChump("name2");
     delete (zo);
 }

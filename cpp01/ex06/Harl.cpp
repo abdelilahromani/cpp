@@ -6,7 +6,7 @@
 /*   By: aromani <aromani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/20 10:34:50 by aromani           #+#    #+#             */
-/*   Updated: 2025/11/20 15:38:26 by aromani          ###   ########.fr       */
+/*   Updated: 2025/11/22 14:20:46 by aromani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,6 @@ void Harl::error(void)
 
 void Harl::complain(std::string level)
 {
-    // member to pointer fubction solve problem if
     std::string lv[4] = {"DEBUG", "INFO", "WARNING", "ERROR" };
 
     void (Harl::*members[4])() = {
@@ -76,7 +75,6 @@ void Harl::complain(std::string level)
             //fall through
         case 3:
             (this->*members[3])();
-            //fall through
             break;
         default:
             std::cout << "invalid member" << std::endl;
