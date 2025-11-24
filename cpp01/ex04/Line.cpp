@@ -6,7 +6,7 @@
 /*   By: aromani <aromani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/18 18:10:02 by aromani           #+#    #+#             */
-/*   Updated: 2025/11/20 15:56:12 by aromani          ###   ########.fr       */
+/*   Updated: 2025/11/22 19:00:45 by aromani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void Line::fill_string()
     if (!file.is_open())
     {
         std::cout << "bad file name" << std::endl;
-        exit(1); 
+        exit(1);
     }
     while (true)
     {
@@ -45,13 +45,9 @@ void Line::fill_string()
 
 void Line::change_content()
 {
-    size_t i;
-    size_t j;
     size_t len;
     size_t f_index;
 
-    i = 0;
-    j = 0;
     f_index = 0;
     if (all_data.empty())
         return ;
@@ -61,25 +57,19 @@ void Line::change_content()
         std::cout << "bad file name" << std::endl;
         exit(1);
     }
-    while (all_data[i])
+    if (s1.empty())
     {
-        len = i;
-        while (all_data[len] == s1[j])
-        {
-            if (j == 0)
-                f_index = i;
-            j++;
-            len++;
-        }
-        if (j == s1.length() && s1.length() != 0)
-        {
-            all_data.erase(f_index, s1.length());
-            all_data.insert(f_index, s2);
-            i += s1.length();
-        }
-        j = 0;
-        i++;
-        
+        ou_f << all_data;
+        ou_f.close();
+        return ;
+    }
+    f_index = all_data.find(s1);
+    while (f_index != std::string::npos)
+    {
+        all_data.erase(f_index, s1.length());
+        all_data.insert(f_index, s2);
+        len = f_index + s2.length();
+        f_index = all_data.find(s1, len);
     }
     ou_f << all_data;
     ou_f.close();

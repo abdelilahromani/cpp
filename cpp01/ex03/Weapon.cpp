@@ -6,7 +6,7 @@
 /*   By: aromani <aromani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 22:29:34 by aromani           #+#    #+#             */
-/*   Updated: 2025/11/18 12:34:12 by aromani          ###   ########.fr       */
+/*   Updated: 2025/11/22 18:09:08 by aromani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ Weapon::Weapon(std::string type)
     this->type = type;
 }
 
-std::string Weapon::get_type() const
+const std::string &Weapon::get_type()
 {
     return (this->type);
 }

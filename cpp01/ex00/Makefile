@@ -15,7 +15,7 @@ $(NAME) : $(OBJF)
 
 %.o : %.cpp $(HF)
 	c++ $(FLAGS) -c $< -o $@
-	
+
 clean :
 	rm -f $(OBJF)
 

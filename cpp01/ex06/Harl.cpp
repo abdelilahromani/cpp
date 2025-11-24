@@ -6,7 +6,7 @@
 /*   By: aromani <aromani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/20 10:34:50 by aromani           #+#    #+#             */
-/*   Updated: 2025/11/22 14:20:46 by aromani          ###   ########.fr       */
+/*   Updated: 2025/11/22 16:02:44 by aromani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,8 +77,7 @@ void Harl::complain(std::string level)
             (this->*members[3])();
             break;
         default:
-            std::cout << "invalid member" << std::endl;
+            std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
             break;
     }
-    
 }
