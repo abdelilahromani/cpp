@@ -6,13 +6,12 @@
 /*   By: aromani <aromani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/24 16:31:59 by aromani           #+#    #+#             */
-/*   Updated: 2025/11/25 11:44:59 by aromani          ###   ########.fr       */
+/*   Updated: 2025/11/25 14:54:31 by aromani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
-
-const int Fixed::fractional = 0;
+#include <cmath>
 
 Fixed::Fixed()
 {
@@ -23,13 +22,11 @@ Fixed::Fixed()
 Fixed::Fixed (const int value)
 {
     this->fp_value = (value * 256);
-    this->fractional = 8;
 }
 
 Fixed::Fixed (const float value)
 {
     this->fp_value = roundf(value * 256);
-    this->fractional = 8;
 }
 
 float Fixed::toFloat(void) const
@@ -56,6 +53,8 @@ Fixed &Fixed::operator=(const Fixed &fixed)
     return (*this);
 }
 
+
+
 int Fixed::getRawBits(void) const
 {
     std::cout << "getRawBits member function called" << std::endl;
@@ -67,11 +66,13 @@ void Fixed::setRawBits(int const raw)
     this->fp_value = raw;
 }
 
+std::ostream &operator<<(std::ostream& of, const Fixed &fixed)
+{
+    of << fixed.toFloat();
+    return (of);
+}
+
 Fixed::~Fixed()
 {
     std::cout << "Destructor called" << std::endl;  
 }
-
-
-
-
