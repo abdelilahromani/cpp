@@ -6,7 +6,7 @@
 /*   By: aromani <aromani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/24 16:31:59 by aromani           #+#    #+#             */
-/*   Updated: 2025/11/25 14:54:31 by aromani          ###   ########.fr       */
+/*   Updated: 2025/11/27 01:33:48 by aromani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 Fixed::Fixed()
 {
-    std::cout << "Default constructor called" << std::endl;
+    //std::cout << "Default constructor called" << std::endl;
     this->fp_value = 0;
 }
 
@@ -41,23 +41,21 @@ int Fixed::toInt(void) const
 
 Fixed::Fixed(const Fixed &fixed)
 {
-    std::cout << "Copy constructor called" << std::endl;
+    //std::cout << "Copy constructor called" << std::endl;
     *this = fixed;
 }
 
 Fixed &Fixed::operator=(const Fixed &fixed)
 {
-    std::cout << "Copy assignment operator called" << std::endl;   
+    //std::cout << "Copy assignment operator called" << std::endl;   
     if (this != &fixed) //leaen more about self asignement
         this->fp_value = fixed.getRawBits();
     return (*this);
 }
 
-
-
 int Fixed::getRawBits(void) const
 {
-    std::cout << "getRawBits member function called" << std::endl;
+    //std::cout << "getRawBits member function called" << std::endl;
     return (this->fp_value);
 }
 
@@ -72,7 +70,91 @@ std::ostream &operator<<(std::ostream& of, const Fixed &fixed)
     return (of);
 }
 
+bool Fixed::operator!=(const Fixed&fixed)
+{
+    return (this->fp_value != fixed.fp_value);
+}
+
+bool Fixed::operator<=(const Fixed&fixed)
+{
+    return (this->fp_value <= fixed.fp_value);
+}
+
+bool Fixed::operator<(const Fixed&fixed)
+{
+    return (this->fp_value < fixed.fp_value);
+}
+
+bool Fixed::operator==(const Fixed&fixed)
+{
+    return (this->fp_value == fixed.fp_value);
+}
+
+bool Fixed::operator>=(const Fixed&fixed)
+{
+    return (this->fp_value >= fixed.fp_value);
+}
+
+bool Fixed::operator>(const Fixed&fixed)
+{
+    return (this->fp_value > fixed.fp_value);
+}
+
+Fixed Fixed::operator*(const Fixed&fixed)
+{
+    Fixed tmp;
+    tmp = (this->fp_value * fixed.fp_value);
+    return (tmp);
+}
+
+Fixed Fixed::operator+(const Fixed&fixed)
+{
+    Fixed tmp;
+    tmp = this->fp_value + fixed.fp_value;
+    return (tmp);
+}
+
+Fixed Fixed::operator-(const Fixed &fixed)
+{
+    Fixed tmp;
+    tmp = this->fp_value - fixed.fp_value;
+    return (tmp);
+}
+
+Fixed Fixed::operator/(const Fixed &fixed)
+{
+    Fixed tmp;
+    tmp = this->fp_value / fixed.fp_value;
+    return (tmp);
+}
+
+Fixed Fixed::operator++()
+{
+    this->fp_value +=1;
+    return (*this);
+}
+
+Fixed Fixed::operator++(int)
+{
+    Fixed tmp = *this;
+    this->fp_value += 1;
+    return (tmp);
+}
+
+Fixed Fixed::operator--()
+{
+    this->fp_value -= 1;
+    return (*this);
+}
+
+Fixed Fixed::operator--(int)
+{
+    Fixed tmp = *this;
+    this->fp_value -= 1;
+    return (tmp);
+}
+
 Fixed::~Fixed()
 {
-    std::cout << "Destructor called" << std::endl;  
+    //std::cout << "Destructor called" << std::endl;  
 }
