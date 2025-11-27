@@ -6,7 +6,7 @@
 /*   By: aromani <aromani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/24 16:31:59 by aromani           #+#    #+#             */
-/*   Updated: 2025/11/27 01:33:48 by aromani          ###   ########.fr       */
+/*   Updated: 2025/11/27 13:50:50 by aromani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ float Fixed::toFloat(void) const
 
 int Fixed::toInt(void) const
 {
-    return (this->fp_value / 246);
+    return (this->fp_value / 256);
 }
 
 Fixed::Fixed(const Fixed &fixed)
@@ -70,67 +70,67 @@ std::ostream &operator<<(std::ostream& of, const Fixed &fixed)
     return (of);
 }
 
-bool Fixed::operator!=(const Fixed&fixed)
+bool Fixed::operator!=(const Fixed&fixed) const
 {
     return (this->fp_value != fixed.fp_value);
 }
 
-bool Fixed::operator<=(const Fixed&fixed)
+bool Fixed::operator<=(const Fixed&fixed) const
 {
     return (this->fp_value <= fixed.fp_value);
 }
 
-bool Fixed::operator<(const Fixed&fixed)
+bool Fixed::operator<(const Fixed&fixed) const
 {
     return (this->fp_value < fixed.fp_value);
 }
 
-bool Fixed::operator==(const Fixed&fixed)
+bool Fixed::operator==(const Fixed&fixed) const
 {
     return (this->fp_value == fixed.fp_value);
 }
 
-bool Fixed::operator>=(const Fixed&fixed)
+bool Fixed::operator>=(const Fixed&fixed) const
 {
     return (this->fp_value >= fixed.fp_value);
 }
 
-bool Fixed::operator>(const Fixed&fixed)
+bool Fixed::operator>(const Fixed&fixed) const
 {
     return (this->fp_value > fixed.fp_value);
 }
 
-Fixed Fixed::operator*(const Fixed&fixed)
+Fixed Fixed::operator*(const Fixed&fixed) const
 {
     Fixed tmp;
-    tmp = (this->fp_value * fixed.fp_value);
+    tmp = ((this->fp_value / 256.0f) * (fixed.fp_value / 256.0f));
     return (tmp);
 }
 
-Fixed Fixed::operator+(const Fixed&fixed)
+Fixed Fixed::operator+(const Fixed&fixed) const
 {
     Fixed tmp;
     tmp = this->fp_value + fixed.fp_value;
     return (tmp);
 }
 
-Fixed Fixed::operator-(const Fixed &fixed)
+Fixed Fixed::operator-(const Fixed &fixed) const
 {
     Fixed tmp;
     tmp = this->fp_value - fixed.fp_value;
     return (tmp);
 }
 
-Fixed Fixed::operator/(const Fixed &fixed)
+Fixed Fixed::operator/(const Fixed &fixed) const
 {
     Fixed tmp;
-    tmp = this->fp_value / fixed.fp_value;
+    tmp = ((this->fp_value * 256.0f) / (fixed.fp_value * 256.0f));
     return (tmp);
 }
 
-Fixed Fixed::operator++()
+Fixed &Fixed::operator++()
 {
-    this->fp_value +=1;
+    this->fp_value += 1;
     return (*this);
 }
 
@@ -141,7 +141,7 @@ Fixed Fixed::operator++(int)
     return (tmp);
 }
 
-Fixed Fixed::operator--()
+Fixed &Fixed::operator--()
 {
     this->fp_value -= 1;
     return (*this);
@@ -152,6 +152,34 @@ Fixed Fixed::operator--(int)
     Fixed tmp = *this;
     this->fp_value -= 1;
     return (tmp);
+}
+
+Fixed Fixed::min(Fixed &a, Fixed &b)
+{
+    if (a < b)
+        return (a);
+    return (b);
+}
+
+Fixed Fixed::max(Fixed &a, Fixed &b)
+{
+    if (a > b)
+        return (a);
+    return (b);
+}
+
+const Fixed Fixed::min(const Fixed &a,const Fixed &b) 
+{
+    if (a < b)
+        return (a);
+    return (b);
+}
+
+const Fixed Fixed::max(const Fixed &a,const Fixed &b) 
+{
+    if (a > b)
+        return (a);
+    return (b);
 }
 
 Fixed::~Fixed()

@@ -6,7 +6,7 @@
 /*   By: aromani <aromani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/24 16:31:59 by aromani           #+#    #+#             */
-/*   Updated: 2025/11/25 14:54:31 by aromani          ###   ########.fr       */
+/*   Updated: 2025/11/27 13:29:47 by aromani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ float Fixed::toFloat(void) const
 
 int Fixed::toInt(void) const
 {
-    return (this->fp_value / 246);
+    return (this->fp_value / 256);
 }
 
 Fixed::Fixed(const Fixed &fixed)
