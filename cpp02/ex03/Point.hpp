@@ -13,6 +13,8 @@ class Point{
         Point(const Point &point);
         Point &operator=(const Point&point);
         ~Point();
+        const Point gatx();
+        const Point gety();
 
 }
 
