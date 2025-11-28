@@ -13,9 +13,11 @@ class Point{
         Point(const Point &point);
         Point &operator=(const Point&point);
         ~Point();
-        const Point gatx();
-        const Point gety();
+        Fixed getx() const;
+        Fixed gety() const;
 
-}
+};
+
+bool bsp(Point const a, Point const b, Point const c, Point const point);
 
 # endif

@@ -2,11 +2,11 @@ NAME = a.out
 
 FLAGS = -Wall -Wextra -Werror -std=c++98 
 
-SRCF = main.cpp Fixed.cpp 
+SRCF = main.cpp Fixed.cpp Point.cpp bdp.cpp
 
 OBJF = ${SRCF:.cpp=.o}
 
-HF = Fixed.hpp
+HF = Fixed.hpp Point.hpp
 
 all : $(NAME)
 
