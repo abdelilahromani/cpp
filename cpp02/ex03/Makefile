@@ -2,7 +2,7 @@ NAME = a.out
 
 FLAGS = -Wall -Wextra -Werror -std=c++98 
 
-SRCF = main.cpp Fixed.cpp Point.cpp bdp.cpp
+SRCF = main.cpp Fixed.cpp Point.cpp bsp.cpp
 
 OBJF = ${SRCF:.cpp=.o}
 

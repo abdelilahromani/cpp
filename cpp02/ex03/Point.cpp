@@ -6,7 +6,7 @@
 /*   By: aromani <aromani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/28 17:00:06 by aromani           #+#    #+#             */
-/*   Updated: 2025/11/28 21:55:38 by aromani          ###   ########.fr       */
+/*   Updated: 2025/12/12 18:27:57 by aromani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,12 @@ Point::Point(): x(0), y(0) {}
 
 Fixed Point::getx() const
 {
-    return (x);
+    return (x );
 }
 
 Fixed Point::gety() const
 {
-    return (y);
+    return (y );
 }
 
 Point::Point(const float x, const float y): x(x), y(y) {}

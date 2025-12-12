@@ -6,7 +6,7 @@
 /*   By: aromani <aromani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/24 16:31:59 by aromani           #+#    #+#             */
-/*   Updated: 2025/11/27 13:50:50 by aromani          ###   ########.fr       */
+/*   Updated: 2025/12/12 16:23:33 by aromani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,27 +16,27 @@
 Fixed::Fixed()
 {
     //std::cout << "Default constructor called" << std::endl;
-    this->fp_value = 0;
+    this->value = 0;
 }
 
 Fixed::Fixed (const int value)
 {
-    this->fp_value = (value * 256);
+    this->value = (value * 256);
 }
 
 Fixed::Fixed (const float value)
 {
-    this->fp_value = roundf(value * 256);
+    this->value = roundf(value * 256);
 }
 
 float Fixed::toFloat(void) const
 {
-    return (this->fp_value / 256.0f);
+    return (this->value / 256.0f);
 }
 
 int Fixed::toInt(void) const
 {
-    return (this->fp_value / 256);
+    return (this->value / 256);
 }
 
 Fixed::Fixed(const Fixed &fixed)
@@ -49,19 +49,19 @@ Fixed &Fixed::operator=(const Fixed &fixed)
 {
     //std::cout << "Copy assignment operator called" << std::endl;   
     if (this != &fixed) //leaen more about self asignement
-        this->fp_value = fixed.getRawBits();
+        this->value = fixed.getRawBits();
     return (*this);
 }
 
 int Fixed::getRawBits(void) const
 {
     //std::cout << "getRawBits member function called" << std::endl;
-    return (this->fp_value);
+    return (this->value);
 }
 
 void Fixed::setRawBits(int const raw)
 {
-    this->fp_value = raw;
+    this->value = raw;
 }
 
 std::ostream &operator<<(std::ostream& of, const Fixed &fixed)
@@ -72,85 +72,85 @@ std::ostream &operator<<(std::ostream& of, const Fixed &fixed)
 
 bool Fixed::operator!=(const Fixed&fixed) const
 {
-    return (this->fp_value != fixed.fp_value);
+    return (this->value != fixed.value);
 }
 
 bool Fixed::operator<=(const Fixed&fixed) const
 {
-    return (this->fp_value <= fixed.fp_value);
+    return (this->value <= fixed.value);
 }
 
 bool Fixed::operator<(const Fixed&fixed) const
 {
-    return (this->fp_value < fixed.fp_value);
+    return (this->value < fixed.value);
 }
 
 bool Fixed::operator==(const Fixed&fixed) const
 {
-    return (this->fp_value == fixed.fp_value);
+    return (this->value == fixed.value);
 }
 
 bool Fixed::operator>=(const Fixed&fixed) const
 {
-    return (this->fp_value >= fixed.fp_value);
+    return (this->value >= fixed.value);
 }
 
 bool Fixed::operator>(const Fixed&fixed) const
 {
-    return (this->fp_value > fixed.fp_value);
+    return (this->value > fixed.value);
 }
 
 Fixed Fixed::operator*(const Fixed&fixed) const
 {
     Fixed tmp;
-    tmp = ((this->fp_value / 256.0f) * (fixed.fp_value / 256.0f));
+    tmp = ((this->value / 256.0f) * (fixed.value / 256.0f));
     return (tmp);
 }
 
 Fixed Fixed::operator+(const Fixed&fixed) const
 {
     Fixed tmp;
-    tmp = this->fp_value + fixed.fp_value;
+    tmp = this->value + fixed.value;
     return (tmp);
 }
 
 Fixed Fixed::operator-(const Fixed &fixed) const
 {
     Fixed tmp;
-    tmp = this->fp_value - fixed.fp_value;
+    tmp = this->value - fixed.value;
     return (tmp);
 }
 
 Fixed Fixed::operator/(const Fixed &fixed) const
 {
     Fixed tmp;
-    tmp = ((this->fp_value * 256.0f) / (fixed.fp_value * 256.0f));
+    tmp = ((this->value * 256.0f) / (fixed.value * 256.0f));
     return (tmp);
 }
 
 Fixed &Fixed::operator++()
 {
-    this->fp_value += 1;
+    this->value += 1;
     return (*this);
 }
 
 Fixed Fixed::operator++(int)
 {
     Fixed tmp = *this;
-    this->fp_value += 1;
+    this->value += 1;
     return (tmp);
 }
 
 Fixed &Fixed::operator--()
 {
-    this->fp_value -= 1;
+    this->value -= 1;
     return (*this);
 }
 
 Fixed Fixed::operator--(int)
 {
     Fixed tmp = *this;
-    this->fp_value -= 1;
+    this->value -= 1;
     return (tmp);
 }
 

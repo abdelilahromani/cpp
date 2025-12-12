@@ -2,10 +2,11 @@
 # define FIXEF_HPP
 
 #include <iostream>
+#include <cmath>
 
 class Fixed{
     private:
-        int fp_value;
+        int value;
         static const int fractional;
     public:
         Fixed();
