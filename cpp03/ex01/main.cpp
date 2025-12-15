@@ -5,30 +5,20 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aromani <aromani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/24 16:32:02 by aromani           #+#    #+#             */
-/*   Updated: 2025/12/14 15:43:39 by aromani          ###   ########.fr       */
+/*   Created: 2025/12/15 14:44:58 by aromani           #+#    #+#             */
+/*   Updated: 2025/12/15 18:16:52 by aromani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include "Point.hpp"
+#include "ScavTrap.hpp"
 
 int main()
 {
-    Point a(0, 0);
-    Point b(0, 10);
-    Point c(4, 0);
+    ScavTrap c("abdo");
+   // ScavTrap b("badr");
 
-    Point inside(1, 1);
-    Point outside(5, 5);
-    Point onEdge(0, 0);
-
-    std::cout << bsp(a, b, c, inside) << std::endl;
-
-    std::cout << bsp(a, b, c, outside) << std::endl;
-
-    std::cout << bsp(a, b, c, onEdge) << std::endl;
-
-    return 0;
+    c.attack("badr");
+    c.takeDamage(4);
+    c.beRepaired(2);
+    c.guardGate();
 }
-

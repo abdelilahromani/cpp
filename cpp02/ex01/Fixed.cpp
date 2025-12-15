@@ -6,12 +6,15 @@
 /*   By: aromani <aromani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/24 16:31:59 by aromani           #+#    #+#             */
-/*   Updated: 2025/12/12 16:23:33 by aromani          ###   ########.fr       */
+/*   Updated: 2025/12/14 15:06:54 by aromani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 #include <cmath>
+
+
+const int Fixed::fractional = 8;
 
 Fixed::Fixed()
 {
@@ -21,11 +24,13 @@ Fixed::Fixed()
 
 Fixed::Fixed (const int value)
 {
+    std::cout << "Int constructor called" << std::endl;
     this->value = (value * 256);
 }
 
 Fixed::Fixed (const float value)
 {
+    std::cout << "Float constructor called" << std::endl;
     this->value = roundf(value * 256);
 }
 
@@ -48,7 +53,7 @@ Fixed::Fixed(const Fixed &fixed)
 Fixed &Fixed::operator=(const Fixed &fixed)
 {
     std::cout << "Copy assignment operator called" << std::endl;   
-    if (this != &fixed) //leaen more about self asignement
+    if (this != &fixed)
         this->value = fixed.getRawBits();
     return (*this);
 }
@@ -57,7 +62,6 @@ Fixed &Fixed::operator=(const Fixed &fixed)
 
 int Fixed::getRawBits(void) const
 {
-    std::cout << "getRawBits member function called" << std::endl;
     return (this->value);
 }
 

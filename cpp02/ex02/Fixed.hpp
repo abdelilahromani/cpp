@@ -1,12 +1,12 @@
 #ifndef FIXED_HPP
-# define FIXEF_HPP
+# define FIXED_HPP
 
 #include <iostream>
 
 class Fixed{
     private:
         int value;
-        static const int fractional = 8;
+        static const int fractional;
     public:
         Fixed();
         ~Fixed();
