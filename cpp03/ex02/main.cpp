@@ -6,21 +6,25 @@
 /*   By: aromani <aromani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/15 14:44:58 by aromani           #+#    #+#             */
-/*   Updated: 2025/12/15 20:54:34 by aromani          ###   ########.fr       */
+/*   Updated: 2025/12/15 21:15:09 by aromani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
 int main()
 {
-    ClapTrap c("abdo");
-    ClapTrap b("badr");
+    //ScavTrap c("abdo");
+    FragTrap e("fragtrap");
+   // ScavTrap b("badr");
 
-    c.attack("badr");
-    c.takeDamage(4);
-    c.beRepaired(2);
-    c.takeDamage(10);
-    c.beRepaired(10);
-    
+    //c.attack("badr");
+    e.attack("laamir");
+   // c.takeDamage(4);
+    e.takeDamage(9);
+    //c.beRepaired(2);
+    e.beRepaired(10);
+   // c.guardGate();
+    e.highFivesGuys();
 }

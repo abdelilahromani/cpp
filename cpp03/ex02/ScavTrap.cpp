@@ -6,7 +6,7 @@
 /*   By: aromani <aromani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/15 17:24:24 by aromani           #+#    #+#             */
-/*   Updated: 2025/12/15 21:19:03 by aromani          ###   ########.fr       */
+/*   Updated: 2025/12/15 21:19:20 by aromani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,6 @@ void ScavTrap::guardGate()
     else
         std::cout << "Scavtrap is dead cant't do anything" << std::endl;
 }
-
 void ScavTrap::attack(const std::string &target)
 {
     if (Hit_Points > 0 && Energy_points > 0)
