@@ -6,7 +6,7 @@
 /*   By: aromani <aromani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/15 17:24:24 by aromani           #+#    #+#             */
-/*   Updated: 2025/12/15 21:19:20 by aromani          ###   ########.fr       */
+/*   Updated: 2025/12/16 17:51:35 by aromani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,32 +64,6 @@ void ScavTrap::attack(const std::string &target)
     }
     else
         std::cout << "ScavTrap " << this->Name << " is dead" << std::endl;
-}
-
-void ScavTrap::takeDamage(unsigned int amount)
-{
-    if (Hit_Points <= amount)
-    {
-        Hit_Points = 0;
-        std::cout << "ScavTrap " << this->Name << " is dead, can't take damage" << std::endl;
-    }
-    else
-    {
-        Hit_Points -= amount;
-        std::cout << "ScavTrap " << this->Name << " takes damage: " << amount << " Hit points left: " << Hit_Points << std::endl;
-    }
-}
-
-void ScavTrap::beRepaired(unsigned int amount)
-{
-    if (Hit_Points > 0 && Energy_points > 0)
-    {
-        Hit_Points += amount;
-        Energy_points--;
-        std::cout << "ScavTrap " << this->Name << " beRepaired: " << amount << " Hit points left: " << Hit_Points << std::endl;
-    }
-    else
-        std::cout << "ScavTrap " << this->Name << " is dead ,can't be repaired" << std::endl;
 }
 
 ScavTrap::~ScavTrap()

@@ -6,7 +6,7 @@
 /*   By: aromani <aromani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/15 19:41:07 by aromani           #+#    #+#             */
-/*   Updated: 2025/12/15 21:18:36 by aromani          ###   ########.fr       */
+/*   Updated: 2025/12/16 17:52:22 by aromani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,43 +46,6 @@ FragTrap &FragTrap::operator=(const FragTrap &fragtrap)
         this->Attack_damage = fragtrap.Attack_damage;
     }
     return (*this);
-}
-
-void FragTrap::attack(const std::string &target)
-{
-    if (Hit_Points > 0 && Energy_points > 0)
-    {
-        Energy_points--;
-        std::cout << "FragTrap " << this->Name << " attacks " << target << ", causing " << this->Attack_damage << " points of damage!" << std::endl;
-    }
-    else
-        std::cout << "FragTrap " << this->Name << " is dead" << std::endl;
-}
-
-void FragTrap::takeDamage(unsigned int amount)
-{
-    if (Hit_Points <= amount)
-    {
-        Hit_Points = 0;
-        std::cout << "FragTrap " << this->Name << " is dead, can't take damage" << std::endl;
-    }
-    else
-    {
-        Hit_Points -= amount;
-        std::cout << "FragTrap " << this->Name << " takes damage: " << amount << " Hit points left: " << Hit_Points << std::endl;
-    }
-}
-
-void FragTrap::beRepaired(unsigned int amount)
-{
-    if (Hit_Points > 0 && Energy_points > 0)
-    {
-        Hit_Points += amount;
-        Energy_points--;
-        std::cout << "FragTrap " << this->Name << " beRepaired: " << amount << " Hit points left: " << Hit_Points << std::endl;
-    }
-    else
-        std::cout << "FragTrap " << this->Name << " is dead ,can't be repaired" << std::endl;
 }
 
 void FragTrap::highFivesGuys()

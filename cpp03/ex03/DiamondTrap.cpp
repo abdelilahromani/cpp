@@ -6,7 +6,7 @@
 /*   By: aromani <aromani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/16 16:34:28 by aromani           #+#    #+#             */
-/*   Updated: 2025/12/16 17:26:26 by aromani          ###   ########.fr       */
+/*   Updated: 2025/12/16 17:52:47 by aromani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,32 +48,6 @@ DiamondTrap &DiamondTrap::operator=(const DiamondTrap &diamondtrap)
 void DiamondTrap::attack(const std::string &target)
 {
     ScavTrap::attack(target);
-}
-
-void DiamondTrap::takeDamage(unsigned int amount)
-{
-    if (Hit_Points <= amount)
-    {
-        Hit_Points = 0;
-        std::cout << "DiamondTrap " << this->Name << " is dead, can't take damage" << std::endl;
-    }
-    else
-    {
-        Hit_Points -= amount;
-        std::cout << "DiamondTrap " << this->Name << " takes damage: " << amount << " Hit points left: " << Hit_Points << std::endl;
-    }
-}
-
-void DiamondTrap::beRepaired(unsigned int amount)
-{
-    if (Hit_Points > 0 && Energy_points > 0)
-    {
-        Hit_Points += amount;
-        Energy_points--;
-        std::cout << "DiamondTrap " << this->Name << " beRepaired: " << amount << " Hit points left: " << Hit_Points << std::endl;
-    }
-    else
-        std::cout << "DiamondTrap " << this->Name << " is dead ,can't be repaired" << std::endl;
 }
 
 void DiamondTrap::whoAmI()
