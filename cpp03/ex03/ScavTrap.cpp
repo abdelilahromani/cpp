@@ -6,7 +6,7 @@
 /*   By: aromani <aromani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/15 17:24:24 by aromani           #+#    #+#             */
-/*   Updated: 2025/12/16 17:53:24 by aromani          ###   ########.fr       */
+/*   Updated: 2025/12/16 18:26:11 by aromani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ ScavTrap::ScavTrap() : ClapTrap()
 ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 {
     std::cout << "param constructor called" << std::endl;
-    this->Name = name;
+
     this->Hit_Points = 100;
     this->Energy_points = 50;
     this->Attack_damage = 20;
