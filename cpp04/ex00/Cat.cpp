@@ -6,7 +6,7 @@
 /*   By: aromani <aromani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/19 12:20:33 by aromani           #+#    #+#             */
-/*   Updated: 2025/12/19 18:47:11 by aromani          ###   ########.fr       */
+/*   Updated: 2025/12/20 13:51:09 by aromani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,8 @@ Cat::Cat(std::string type) : Animal(type)
 Cat &Cat::operator=(const Cat &cat)
 {
     std::cout << "Cat copy asigment operator called" << std::endl;
-    //Animal::operator=(cat);
-    (void)cat;
+    if (this != &cat)
+        Animal::operator=(cat);
     return (*this);
 }
 

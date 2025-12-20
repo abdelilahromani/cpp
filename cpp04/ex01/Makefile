@@ -1,12 +1,12 @@
 NAME = a.out
 
 FLAGS = -Wall -Wextra -Werror -std=c++98 
-
-SRCF = main.cpp Animal.cpp Dog.cpp Cat.cpp
+ 
+SRCF = main.cpp Animal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp Brain.cpp
 
 OBJF = ${SRCF:.cpp=.o}
 
-HF = Animal.hpp Cat.hpp Dog.hpp
+HF = Animal.hpp Cat.hpp Dog.hpp WrongAnimal.hpp WrongCat.hpp Brain.hpp
 
 all : $(NAME)
 

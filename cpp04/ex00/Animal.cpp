@@ -6,12 +6,11 @@
 /*   By: aromani <aromani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/19 12:20:29 by aromani           #+#    #+#             */
-/*   Updated: 2025/12/19 18:57:32 by aromani          ###   ########.fr       */
+/*   Updated: 2025/12/20 13:52:25 by aromani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Animal.hpp"
-#include <typeinfo>
 
 Animal::Animal()
 {
