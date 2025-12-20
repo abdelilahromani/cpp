@@ -11,7 +11,7 @@ class Cat : public Animal
         Cat &operator=(const Cat &cat);
         Cat (const Cat &cat);
         Cat (std::string type);
-
+        void makeSound() const;
 };
 
 

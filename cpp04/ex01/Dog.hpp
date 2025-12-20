@@ -13,7 +13,8 @@ class Dog : public Animal
         ~Dog();
         Dog(std::string type);
         Dog(const Dog&dog);
-        Dog &operator=(const Dog&dog);
+        Dog &operator=(const Dog&dog); 
+        void makeSound() const;
 };
 
 

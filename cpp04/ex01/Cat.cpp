@@ -6,7 +6,7 @@
 /*   By: aromani <aromani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/19 12:20:33 by aromani           #+#    #+#             */
-/*   Updated: 2025/12/20 15:04:37 by aromani          ###   ########.fr       */
+/*   Updated: 2025/12/20 16:55:37 by aromani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,11 @@ Cat::Cat(std::string type) : Animal(type)
 void Cat::set_brain(std::string idea, int i)
 {
     br->set_idea(idea, i);
+}
+
+void Cat::makeSound() const
+{
+    std::cout << "type: " << type << " meaw " << std::endl;
 }
 
 std::string Cat::get_brain(int i) const

@@ -6,7 +6,7 @@
 /*   By: aromani <aromani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/19 12:20:36 by aromani           #+#    #+#             */
-/*   Updated: 2025/12/20 16:55:45 by aromani          ###   ########.fr       */
+/*   Updated: 2025/12/20 16:54:58 by aromani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ void Dog::makeSound() const
 {
     std::cout << "type: " << type << " bark " << std::endl;
 }
+
 
 Dog &Dog::operator=(const Dog&dog)
 {

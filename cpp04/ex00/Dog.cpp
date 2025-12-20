@@ -6,7 +6,7 @@
 /*   By: aromani <aromani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/19 12:20:36 by aromani           #+#    #+#             */
-/*   Updated: 2025/12/20 13:52:02 by aromani          ###   ########.fr       */
+/*   Updated: 2025/12/20 16:55:10 by aromani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,11 @@ Dog::Dog() : Animal()
 {
    type = "Dog";
    std::cout << "Dog default constructor called" << std::endl; 
+}
+
+void Dog::makeSound() const
+{
+    std::cout << "type: " << type << " bark " << std::endl;
 }
 
 Dog::Dog(std::string type) : Animal(type)
