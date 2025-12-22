@@ -18,11 +18,11 @@ class Character : public ICharacter
         Character(const Character &character);
         Character &operator=(const Character &character);
         ~Character();
-        std::string const & getName() const = 0;
-        void equip(AMateria* m) = 0;
-        void unequip(int idx) = 0;
-        void use(int idx, ICharacter& target) = 0;
-        static void clean_floors(void) const;
-}
+        std::string const & getName() const;
+        void equip(AMateria* m);
+        void unequip(int idx);
+        void use(int idx, ICharacter& target);
+        static void clean_floors();
+};
 
 # endif

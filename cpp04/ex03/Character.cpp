@@ -6,7 +6,7 @@
 /*   By: aromani <aromani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/22 16:43:02 by aromani           #+#    #+#             */
-/*   Updated: 2025/12/22 17:11:51 by aromani          ###   ########.fr       */
+/*   Updated: 2025/12/22 20:41:37 by aromani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ void Character::clean_inventory(void) const
     for (int i = 0; i < 4; i++)
     {
         delete this->inven[i];
-        this->inven[i] = NULL;
+        //this->inven[i] = NULL;
     }
 }
 
@@ -101,12 +101,12 @@ void Character::unequip(int idx)
 
 void Character::use(int idx, ICharacter& target)
 {
-     if (idx < 0 || idx >= 4 || !inven[idx] || !target)
+     if (idx < 0 || idx >= 4 || !inven[idx])
         return ;
     inven[idx]->use(target);
 }
 
-static void Character::clean_floors(void) const
+void Character::clean_floors()
 {
     for (int i = 0; i < floor_index; i++)
     {

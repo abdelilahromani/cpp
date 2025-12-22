@@ -1,6 +1,8 @@
 #ifndef IM
 # define IM
 
+#include "AMateria.hpp"
+
 class IMateriaSource
 {
     public:

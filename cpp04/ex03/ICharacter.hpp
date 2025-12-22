@@ -1,7 +1,8 @@
 #ifndef IC
 # define IC
 
-#include <iostream>
+#include <string>
+class AMateria;
 
 class ICharacter
 {
