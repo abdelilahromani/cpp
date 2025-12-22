@@ -1,42 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Ice.cpp                                            :+:      :+:    :+:   */
+/*   Cure.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aromani <aromani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/22 15:55:09 by aromani           #+#    #+#             */
-/*   Updated: 2025/12/22 16:03:37 by aromani          ###   ########.fr       */
+/*   Created: 2025/12/22 16:04:15 by aromani           #+#    #+#             */
+/*   Updated: 2025/12/22 16:19:35 by aromani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Ice.hpp"
+#include "Cure.hpp"
 
-Ice::Ice() : AMateria("ice") {}
+Cure::Cure() : AMateria("cure") {}
 
-Ice::~Ice() {}
+Cure::~Cure() {}
 
-Ice::Ice(const Ice &ice) : AMateria(ice)
+Cure::Cure(const Cure &cure) : AMateria(cure)
 {
-    *this = ice;
+    *this = cure;
 }
 
-Ice &Ice::operator=(const Ice &ice)
+Cure &Cure::operator=(const Cure &cure)
 {
-    if (this != &ice)
+    if (this != &cure)
     {
-        AMateria::operator=(ice);
+        AMateria::operator=(cure);
     }
     return (*this);
 }
 
-void Ice::use(ICharacter &target)
+AMateria *Cure::clone() const
 {
-    //Ice: "* shoots an ice bolt at <name> *"
-    std::cout << "Ice: * shoots an ice bolt at " << target << " *" << std::endl;
+    return (new Cure(*this));
 }
 
-Amateria *Ice::clone() const
+void Cure::use(ICharacter &target)
 {
-    return (new Ice(*this));
+    std::cout << "Cure: * heals " << target << "’s wounds *" << std::endl;
 }
