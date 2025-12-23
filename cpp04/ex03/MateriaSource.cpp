@@ -6,7 +6,7 @@
 /*   By: aromani <aromani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/22 19:31:11 by aromani           #+#    #+#             */
-/*   Updated: 2025/12/22 20:48:20 by aromani          ###   ########.fr       */
+/*   Updated: 2025/12/23 19:06:31 by aromani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,10 +49,11 @@ void MateriaSource::learnMateria(AMateria *amateria)
     {
         if (!source[i])
         {
-            source[i] = amateria->clone();
+            source[i] = amateria;
             return ;
         }
     }
+    delete amateria;
 }
 
 AMateria *MateriaSource::createMateria(std::string const &type)

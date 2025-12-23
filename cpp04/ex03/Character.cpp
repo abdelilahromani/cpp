@@ -6,7 +6,7 @@
 /*   By: aromani <aromani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/22 16:43:02 by aromani           #+#    #+#             */
-/*   Updated: 2025/12/22 20:41:37 by aromani          ###   ########.fr       */
+/*   Updated: 2025/12/23 19:15:40 by aromani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,12 +33,12 @@ Character::Character(std::string name)
     }
 }
 
-void Character::clean_inventory(void) const
+void Character::clean_inventory(void)
 {
     for (int i = 0; i < 4; i++)
     {
         delete this->inven[i];
-        //this->inven[i] = NULL;
+        inven[i] = NULL;
     }
 }
 
@@ -80,12 +80,18 @@ void Character::equip(AMateria* m)
         return ;
     for (int i = 0; i < 4; i++)
     {
+        if (inven[i] == m)
+            return ;
+    }
+    for (int i = 0; i < 4; i++)
+    {
         if (!inven[i])
         {
             inven[i] = m;
             return ;
         }
     }
+    delete m;
 }
 
 void Character::unequip(int idx)

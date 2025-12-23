@@ -11,7 +11,7 @@ class Character : public ICharacter
         AMateria *       inven[4];
         static AMateria* floor[100];
         static int       floor_index;
-        void clean_inventory(void) const;
+        void clean_inventory(void);
     public:
         Character();
         Character(std::string name);
