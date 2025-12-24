@@ -6,7 +6,7 @@
 /*   By: aromani <aromani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/22 20:15:55 by aromani           #+#    #+#             */
-/*   Updated: 2025/12/23 19:14:35 by aromani          ###   ########.fr       */
+/*   Updated: 2025/12/24 01:43:16 by aromani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,30 +19,20 @@
 int main()
 {
     IMateriaSource* src = new MateriaSource();
-    src->learnMateria(new Ice());
-    src->learnMateria(new Cure());
-    src->learnMateria(new Cure());
-    src->learnMateria(new Cure());
-    src->learnMateria(new Cure());
+    AMateria *ice = new Ice();
+    AMateria *cure = new Cure();
+    src->learnMateria(cure);
+    src->learnMateria(ice);
     ICharacter* me = new Character("me");
     AMateria* tmp;
     tmp = src->createMateria("ice");
     me->equip(tmp);
-    // tmp = src->createMateria("ice");
+    tmp = src->createMateria("cure");
     me->equip(tmp);
-    // tmp = src->createMateria("ice");
-//     me->equip(tmp);
-//     tmp = src->createMateria("ice");
-//     me->equip(tmp);
-//     tmp = src->createMateria("ice");
-//     me->equip(tmp);
-//     ICharacter* bob = new Character("bob");
-//     //me->use(0, *bob);
-//    // me->use(1, *bob);
-//     for (int i = 0; i <= 100; i++)
-//         me->use(i, *bob);
-//     Character::clean_floors();
-    // delete bob;
+    ICharacter* bob = new Character("bob");
+    me->use(0, *bob);
+    me->use(1, *bob);
+    delete bob;
     delete me;
     delete src;
     return 0;
