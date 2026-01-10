@@ -2,9 +2,9 @@ NAME = a.out
 
 FLAGS = -Wall -Wextra -Werror -std=c++98 
  
-SRCF = main.cpp Bureaucrat.cpp
+SRCF = main.cpp Bureaucrat.cpp Form.cpp
 
-HF = Bureaucrat.hpp
+HF = Bureaucrat.hpp Form.hpp
 
 OBJF = ${SRCF:.cpp=.o}
 

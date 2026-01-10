@@ -6,11 +6,12 @@
 /*   By: aromani <aromani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/09 18:04:43 by aromani           #+#    #+#             */
-/*   Updated: 2026/01/09 23:49:41 by aromani          ###   ########.fr       */
+/*   Updated: 2026/01/10 13:29:15 by aromani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Form.hpp"
+#include "Bureaucrat.hpp"
 
 Form::Form(): name("default"), signe(false),gradetosign(150),gradetoexec(150){}
 
@@ -27,17 +28,34 @@ Form &Form::operator=(const Form &form)
     return (*this);
 }
 
+void Form::beSigned(const Bureaucrat &b)
+{
+    if (b.getGrade() > this->gradetosign)
+        GradeTooLowException();
+    signe = true;
+}
+
+const char* Form::GradeTooHighException::what() const throw()
+{
+    return ("Grade is too high");
+}
+
+const char* Form::GradeTooLowException::what() const throw()
+{
+    return ("Grade is too low");
+}
+
 const std::string Form::get_name() const
 {
     return (this->name);
 }
 
-const int Form::get_grades() const
+int Form::get_grades() const
 {
     return (this->gradetosign);
 }
 
-const int Form::get_gradex() const
+int Form::get_gradex() const
 {
     return (this->gradetoexec);
 }

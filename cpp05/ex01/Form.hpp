@@ -1,9 +1,8 @@
 #ifndef FORM
 # define FORM
 
-#include "Bureaucrat.hpp"
 #include <string>
-// class Bureaucrat;
+class Bureaucrat;
 
 class Form
 {
@@ -19,10 +18,11 @@ class Form
         Form(const Form& form);
         Form &operator=(const Form& form);
         const std::string get_name() const;
-        const int get_grades() const;
-        const int get_gradex() const;
+        int get_grades() const;
+        int get_gradex() const;
         bool  get_signed() const;
 
+        void beSigned(const Bureaucrat &b);
         class GradeTooHighException : public std::exception
         {
             public:
