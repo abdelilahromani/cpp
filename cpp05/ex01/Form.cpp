@@ -6,7 +6,7 @@
 /*   By: aromani <aromani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/09 18:04:43 by aromani           #+#    #+#             */
-/*   Updated: 2026/01/10 13:29:15 by aromani          ###   ########.fr       */
+/*   Updated: 2026/01/10 13:43:25 by aromani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,4 +63,10 @@ int Form::get_gradex() const
 bool Form::get_signed() const
 { 
     return (this->signe);
+}
+
+std::ostream &operator<<(std::ostream &os, const Form &form)
+{
+    os << "form" << form.get_name() << ", signed" << form.get_signed() << ", gradetosign" << form.get_grades() << ", gradetoexec" << form.get_gradex() << std::endl;
+    return (os);
 }

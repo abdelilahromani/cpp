@@ -6,7 +6,7 @@
 /*   By: aromani <aromani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/29 19:03:13 by aromani           #+#    #+#             */
-/*   Updated: 2026/01/10 13:28:05 by aromani          ###   ########.fr       */
+/*   Updated: 2026/01/10 13:35:21 by aromani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,16 +70,16 @@ std::ostream &operator<<(std::ostream &of, const Bureaucrat &bureaucrat)
     return (of);
 }
 
-void Bureaucrat::signForm(Form &from)
+void Bureaucrat::signForm(Form &form)
 {
     try
     {
-        from.beSigned(*this);
-        std::cout << "signed" << std::endl;
+        form.beSigned(*this);
+        std::cout << this->name << " signed " << form.get_name() << std::endl;
     }
-    catch(const std::exception& e)
+    catch (std::exception &e)
     {
-        std::cerr << e.what() << '\n';
+        std::cout << this->name << " couldn’t sign " << form.get_name() << " because " << e.what() << std::endl;
     }
     
 }
