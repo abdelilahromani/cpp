@@ -6,7 +6,7 @@
 /*   By: aromani <aromani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/29 19:44:46 by aromani           #+#    #+#             */
-/*   Updated: 2026/01/10 13:45:04 by aromani          ###   ########.fr       */
+/*   Updated: 2026/01/11 16:02:45 by aromani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int main()
         a.decrement();
         std::cout << "After decrement: " << a << std::endl;
     }
-    catch (std::exception& e)
+    catch (std::exception &e)
     {
         std::cout << "Exception: " << e.what() << std::endl;
     }
