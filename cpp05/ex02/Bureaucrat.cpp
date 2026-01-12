@@ -6,12 +6,12 @@
 /*   By: aromani <aromani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/29 19:03:13 by aromani           #+#    #+#             */
-/*   Updated: 2026/01/10 13:35:21 by aromani          ###   ########.fr       */
+/*   Updated: 2026/01/12 02:12:21 by aromani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
-#include "Form.hpp"
+#include "AForm.hpp"
 
 Bureaucrat::Bureaucrat() : name("default")
 {
@@ -94,4 +94,17 @@ const char* Bureaucrat::GradeTooHighException::what() const throw()
 const char* Bureaucrat::GradeTooLowException::what() const throw()
 {
     return ("Grade is too low");
+}
+
+void Bureaucrat::executeForm(Form const &form) const
+{
+    // try
+    // {
+        form.execute(*this);
+        std::cout << name << " executed " << form.get_name() << std::endl;
+    // }
+    // catch (std::exception &e)
+    // {
+    //     std::cout << name << " couldn’t execute " << form.get_name() << " because " << e.what() << std::endl;
+    // }
 }

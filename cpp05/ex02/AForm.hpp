@@ -2,6 +2,7 @@
 # define FORM
 
 #include <string>
+#include <iostream>
 class Bureaucrat;
 
 class Form
@@ -30,6 +31,12 @@ class Form
         };
 
         class GradeTooLowException : public std::exception
+        {
+            public:
+                const char *what() const throw();
+        };
+
+        class FormNotBesigned : public std::exception
         {
             public:
                 const char *what() const throw();
