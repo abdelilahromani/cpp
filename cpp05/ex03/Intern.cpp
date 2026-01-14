@@ -6,7 +6,7 @@
 /*   By: aromani <aromani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/14 20:33:43 by aromani           #+#    #+#             */
-/*   Updated: 2026/01/14 21:07:14 by aromani          ###   ########.fr       */
+/*   Updated: 2026/01/14 23:34:03 by aromani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,18 +30,17 @@ Intern &Intern::operator=(const Intern &intern)
     return (*this);
 }
 
-Form *Intern::makeForm(std::string requist, std::string target)
+AForm *Intern::makeForm(std::string requist, std::string target)
 {
+    AForm *requists[3] = {
+        new PresidentialPardonForm(target),
+        new RobotomyRequestForm(target),
+        new ShrubberyCreationForm(target)
+    };
     std::string names[3] = {
         "presidential pardon",
         "robotomy request",
         "shrubbery creation"
-    };
-
-    Form *requists[3] = {
-        new PresidentialPardonForm(target),
-        new RobotomyRequestForm(target),
-        new ShrubberyCreationForm(target)
     };
     int saveindex = 4;
     for (int i = 0; i < 3; i++)

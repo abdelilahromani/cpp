@@ -6,7 +6,7 @@
 /*   By: aromani <aromani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/29 19:03:13 by aromani           #+#    #+#             */
-/*   Updated: 2026/01/12 02:12:21 by aromani          ###   ########.fr       */
+/*   Updated: 2026/01/14 21:54:50 by aromani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ std::ostream &operator<<(std::ostream &of, const Bureaucrat &bureaucrat)
     return (of);
 }
 
-void Bureaucrat::signForm(Form &form)
+void Bureaucrat::signForm(AForm &form)
 {
     try
     {
@@ -96,7 +96,7 @@ const char* Bureaucrat::GradeTooLowException::what() const throw()
     return ("Grade is too low");
 }
 
-void Bureaucrat::executeForm(Form const &form) const
+void Bureaucrat::executeForm(AForm const &form) const
 {
     // try
     // {

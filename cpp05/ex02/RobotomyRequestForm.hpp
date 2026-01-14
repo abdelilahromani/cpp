@@ -5,7 +5,7 @@
 #include "Bureaucrat.hpp"
 #include <iostream>
 
-class RobotomyRequestForm: public Form
+class RobotomyRequestForm: public AForm
 {
     private:
         std::string target;

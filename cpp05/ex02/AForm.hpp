@@ -5,7 +5,7 @@
 #include <iostream>
 class Bureaucrat;
 
-class Form
+class AForm
 {
     private:
         const std::string name;
@@ -13,11 +13,11 @@ class Form
         const int gradetosign;
         const int gradetoexec;
     public:
-        Form();
-        Form(const std::string name, const int gradetosign, const int gradetoexec);
-        ~Form();
-        Form(const Form& form);
-        Form &operator=(const Form& form);
+        AForm();
+        AForm(const std::string name, const int gradetosign, const int gradetoexec);
+        ~AForm();
+        AForm(const AForm& form);
+        AForm &operator=(const AForm& form);
         const std::string get_name() const;
         int get_grades() const;
         int get_gradex() const;
@@ -43,6 +43,6 @@ class Form
         };
 
 };
-std::ostream &operator<< (std::ostream& of, const Form &form);
+std::ostream &operator<< (std::ostream& of, const AForm &form);
 
 # endif

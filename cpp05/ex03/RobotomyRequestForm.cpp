@@ -6,24 +6,24 @@
 /*   By: aromani <aromani@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/11 23:18:12 by aromani           #+#    #+#             */
-/*   Updated: 2026/01/12 02:07:34 by aromani          ###   ########.fr       */
+/*   Updated: 2026/01/14 21:54:20 by aromani          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "RobotomyRequestForm.hpp"
 #include <ctime>
 
-RobotomyRequestForm::RobotomyRequestForm(): Form("RobotomyRequestForm", 72, 45)
+RobotomyRequestForm::RobotomyRequestForm(): AForm("RobotomyRequestForm", 72, 45)
 {
     this->target = "default";
 }
 
-RobotomyRequestForm::RobotomyRequestForm(std::string target): Form("RobotomyRequestForm", 72, 45)
+RobotomyRequestForm::RobotomyRequestForm(std::string target): AForm("RobotomyRequestForm", 72, 45)
 {
     this->target = target;
 }
 
-RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm& rfrom): Form(rfrom)
+RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm& rfrom): AForm(rfrom)
 {
     *this = rfrom;
 }
